@@ -4,7 +4,7 @@ import axios from "axios";
 import * as React from "react"
 import "./login.css"
 
-export default function Login({setShowLogin, setCurrentUsername, user}){
+export default function Login({setShowLogin, setCurrentUsername, myStorage}){
     const [error, setError] = React.useState(false);
     const usernameRef = React.useRef()
     const passwordRef = React.useRef()
@@ -19,7 +19,9 @@ export default function Login({setShowLogin, setCurrentUsername, user}){
         try{
             const res = await axios.post("https://map-app-backend.herokuapp.com/users/login", credentials);
             setCurrentUsername(res.data.username)
+            myStorage.setItem("user",res.data.username)
             setShowLogin(false);
+            setError(false);
         }catch(err){
             console.log(err)
             setError(true)

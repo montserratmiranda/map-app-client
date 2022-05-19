@@ -10,8 +10,8 @@ import Login from './components/Login';
 import Topbar from './components/Topbar';
 
 function App() {
-  const user = React.useState({})
-  const [currentUsername,setCurrentUsername] = React.useState(user)
+  const myStorage = window.localStorage;
+  const [currentUsername,setCurrentUsername] = React.useState(myStorage.getItem("user"));
   const [viewState, setViewState] = React.useState({
     center: [0, 0],
         zoom: 0.7,
@@ -79,6 +79,11 @@ function App() {
     } catch (err) {
       console.log(err);
     }
+  };
+
+  const handleLogout = () => {
+    setCurrentUsername(null);
+    myStorage.removeItem("user");
   };
 
   return( 
@@ -164,7 +169,7 @@ function App() {
         </Popup>
       )}
       {currentUsername ? (
-      <button className="button logout" > Log out
+      <button className="button logout" onClick={handleLogout}> Log out
       </button>
       ) : (
          <div className='buttons'>
@@ -176,6 +181,7 @@ function App() {
       {showLogin && (
       <Login 
       setShowLogin={setShowLogin}
+      myStorage={myStorage}
       setCurrentUsername={setCurrentUsername}
       />
       )}  
