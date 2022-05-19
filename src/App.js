@@ -11,7 +11,7 @@ import Topbar from './components/Topbar';
 
 function App() {
   const myStorage = window.localStorage;
-  const [currentUsername,setCurrentUsername] = React.useState(myStorage.getItem("user"));
+  const [currentUsername,setCurrentUsername] = React.useState(myStorage.getItem("username"));
   const [viewState, setViewState] = React.useState({
     center: [0, 0],
         zoom: 0.7,
@@ -83,7 +83,7 @@ function App() {
 
   const handleLogout = () => {
     setCurrentUsername(null);
-    myStorage.removeItem("user");
+    myStorage.removeItem("username");
   };
 
   return( 
