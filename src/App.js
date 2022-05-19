@@ -154,7 +154,7 @@ function App() {
             <option value="2">Sports</option>
             <option value="3">History</option>
             <option value="4">Geography</option>
-            <option value="5">Social Studies</option>
+            <option value="5 Studies">Social Studies</option>
             <option value="6">Food</option>
           </select>
           <label>Description </label>

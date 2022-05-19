@@ -1,7 +1,7 @@
 .idea{
     width: 200px;
     height: 250px;
-    display:grid;
+    display: flex;
     flex-direction: column;
     justify-content: space-around;
     overflow: scroll;
