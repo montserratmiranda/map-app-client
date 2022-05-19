@@ -17,8 +17,7 @@ export default function Login({setShowLogin, setCurrentUsername, user}){
         };
 
         try{
-            const res = await axios.post("https://map-app-backend.herokuapp.com/users/login", user);
-            setNewUser([...newUser])
+            const res = await axios.post("https://map-app-backend.herokuapp.com/users/login", credentials);
             setCurrentUsername(res.data.username)
             setShowLogin(false);
         }catch(err){
