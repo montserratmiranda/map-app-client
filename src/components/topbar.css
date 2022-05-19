@@ -1,0 +1,15 @@
+.topbarContainer{
+    height: 23px;
+    width: 100%;
+    background-color: rgb(24, 74, 202);
+    display:flex;
+    align-items: center;
+    position: sticky;
+    bottom: 0;
+}
+
+.logoTopbar{
+    font-size: 15px;
+    margin-left: 20px;
+    color: white;
+}

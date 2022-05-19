@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+
+
+.signUpContainer{
+    width:200px;
+    height: 250px;
+    padding: 15px;
+    border-radius: 15px;
+    background-color: white;
+    position:absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin:auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content:space-between;
+}
+.logo{
+    color: slateblue;
+    display: center;
+    align-items: center;
+    font-weight: 800;
+    font-size: x-large;
+    font-family: 'Rubik Puddles';
+    left: 150px;
+    right: 150px;
+    text-align: center;
+    align-items: center;
+    font-family: 'Major Mono Display', monospace;
+}
+.signUpButton{
+    border: none;
+    padding:10px;
+    border-radius: 10px;
+    color:white; 
+    background-color:tomato;
+    cursor:pointer;
+}
+.success{
+    color: rgb(2, 174, 2);
+    font-size: 12px;
+    text-align:center;
+}
+.failure{
+    color: red;
+    font-size: 12px;
+    text-align:center;
+}
+.signUpCancel{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+
+}

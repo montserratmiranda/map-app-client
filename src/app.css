@@ -1,0 +1,88 @@
+.idea{
+    width: 200px;
+    height: 250px;
+    display:grid;
+    flex-direction: column;
+    justify-content: space-around;
+    overflow: scroll;
+
+}
+
+label{
+    width: max-content;
+    color: rgb(24, 74, 202);
+    font-size: 11px, bold;
+    margin: 3px 0;
+    border-radius:1px, rgb(121, 105, 223)
+}
+form{
+    width: 200px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: 15px;
+}
+
+
+.username{
+    font-size: 8;
+    font-family:'Courier New', Courier, monospace;
+}
+
+.likes{
+    color:palevioletred;
+    font-weight:1px;
+}
+
+input, textarea{
+    border: 1px solid rgb(235, 236, 238);
+    height: 25px;
+    border-radius: 5px;
+    font-size: 9px;
+    margin-top: 1px;
+}
+
+input::placeholder, textarea::placeholder{
+    font-size: 9px;
+    color: lightslategray;
+}
+
+select{
+    font-size: 10px;
+    cursor: pointer;
+    color:lightslategray;
+    width: min-content;
+}
+
+.submitButton{
+    border:none;
+    margin-top: 8px;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+    background-color: rgb(121, 105, 223);
+    cursor:pointer;
+}
+.button {
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+.logout{
+    background-color: rgba(143, 252, 145, 0.793);
+}
+.login{
+    background-color: rgb(19, 219, 229);
+    margin-right: 8px;
+}
+.signup{
+    background-color: rgb(121, 105, 223);
+}
+.buttons,.logout{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}

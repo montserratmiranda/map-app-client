@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+
+.loginContainer{
+    width:200px;
+    height: 250px;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: white;
+    position:absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin:auto;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+}
+.logo{
+    color: rgb(6, 201, 185);
+    display: center;
+    align-items: center;
+    font-weight: 800;
+    font-size: x-large, bold;
+    left: 150px;
+    right: 150px;
+    text-align: center;
+    align-items: center;
+    font-family: 'Major Mono Display', monospace;
+    margin-bottom: 10px;
+}
+.loginButton{
+    border: none;
+    padding:10px;
+    border-radius: 10px;
+    color:white; 
+    background-color:tomato;
+    cursor:pointer;
+    margin-bottom: 1px;
+}
+.failure{
+    color: red;
+    font-size: 12px;
+    text-align:center;
+}
+.loginCancel{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+
+}
