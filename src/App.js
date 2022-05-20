@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {Map, Marker, Popup} from 'react-map-gl';
+import Map, {Marker, Popup} from 'react-map-gl';
 import './app.css'
 import 'mapbox-gl/dist/mapbox-gl.css';
 import axios from 'axios';
@@ -12,9 +12,11 @@ import Topbar from './components/Topbar';
 function App() {
   const myStorage = window.localStorage;
   const [currentUsername,setCurrentUsername] = React.useState(myStorage.getItem("username"));
+
+
   const [viewState, setViewState] = React.useState({
     center: [0, 0],
-        zoom: 0.7,
+        zoom: 0.8,
   });
   //create and display ideas
   const [newIdea, setNewIdea] = React.useState(null);
@@ -63,7 +65,7 @@ function App() {
   const handleSubmit = async (e)=>{
     e.preventDefault();
     const newMarker = {
-      user:currentUsername,
+      username:currentUsername,
       title,
       category,
       desc,
@@ -150,12 +152,12 @@ function App() {
           <input placeholder='Give a distinctive name to your idea!' onChange={(e)=>setTitle(e.target.value)}></input>
           <label>Category </label>
           <select onChange={(e)=>setCategory(e.target.value)}>
-            <option value="1">Arts</option>
-            <option value="2">Sports</option>
-            <option value="3">History</option>
-            <option value="4">Geography</option>
-            <option value="5 Studies">Social Studies</option>
-            <option value="6">Food</option>
+            <option value="Arts">Arts</option>
+            <option value="Sports">Sports</option>
+            <option value="History">History</option>
+            <option value="Geography">Geography</option>
+            <option value="Social Studies">Social Studies</option>
+            <option value="Food">Food</option>
           </select>
           <label>Description </label>
           <textarea placeholder='How does this idea relate to this country?' onChange={(e)=>setDesc(e.target.value)}></textarea>
